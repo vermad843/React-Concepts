@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Nav from './components/Nav';
+import Main from './components/main';
+import Footer from './components/footer';
+import './App.css';
+
 
 
 
 function App() {
   return (
-    <div>
-       <h1>Vishnu</h1>
-       <p>I Love Coding</p>   
-      <ul>
-        <li>London </li>
-        <li>Paris</li>
-        <li>NewYork</li>
-     </ul>
+    <div className = "App">
+      <Nav/>
+      <Main/>
+      <Footer/>
    </div>
   );   
 }
