@@ -1,12 +1,12 @@
 import React from 'react';
 
-function ContactCard() {
+function ContactCard(props) {
     return (
         <div className = "contact-card">
-           <img className = "Image" src = "youtube-3873587_1920.jpg"/>
-           <h3>Youtube</h3> 
-           <p>phone : 000001</p>
-           <p>Email : Youtube</p>
+           <img  src = {props.imageUrl}/>
+           <h3>{props.name}</h3> 
+           <p>phone : {props.phone}</p>
+           <p>Email : {props.email}</p>
         </div>
     )
 }
