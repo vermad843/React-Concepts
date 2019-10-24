@@ -1,34 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import ContactCard from './ContactCard';
 
-function App() {
-    return (
-      <div className = "Contacts">
-        <ContactCard 
-           name = "youtube"
-           imageUrl = "youtube-3873587_1920.jpg"
-           phone = "00001"
-           email = "youtube.com"
-        />
-            <ContactCard 
-           name = "youtube"
-           imageUrl = "youtube-3873587_1920.jpg"
-           phone = "00001"
-           email = "youtube.com"
-        />    <ContactCard 
-           name = "youtube"
-           imageUrl = "youtube-3873587_1920.jpg"
-           phone = "00001"
-           email = "youtube.com"
-        />    <ContactCard 
-           name = "youtube"
-           imageUrl = "youtube-3873587_1920.jpg"
-           phone = "00001"
-           email = "youtube.com"
-        /> 
-        </div>
-    )
+
+class App extends Component {
+   constructor() {
+      super();
+     this.state = {
+
+     } 
    }
+componentDidMount() {
+ fetch("https://swapi.co/api/people/1")
+    .then(res => {
+      return  res.json()
+    }).then(data => {
+    console.log(data);
+    })
+}
+
+   render() {
+      return (
+         <h1>hello</h1>
+      );
+   }
+}
 
 export default App;
+
+
+
+// Fetching data from an API
+// https://swapi.co(starWar API)
