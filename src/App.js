@@ -6,7 +6,7 @@ class App extends Component {
    constructor() {
       super();
      this.state = {
-
+     character : {}
      } 
    }
 componentDidMount() {
@@ -14,13 +14,17 @@ componentDidMount() {
     .then(res => {
       return  res.json()
     }).then(data => {
-    console.log(data);
+       this.setState({
+         character : data 
+       })
     })
 }
 
    render() {
       return (
-         <h1>hello</h1>
+         <div>
+            {this.state.character.name}
+         </div>
       );
    }
 }
