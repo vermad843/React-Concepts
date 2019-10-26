@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  const firstName = "Vishnu"
-  const lastName = "Verma"
-  return (
-    <div>
-       <h1>Hello {firstName + ' ' + lastName} </h1>
-    </div>
+   const date = new Date()
+   return (
+     <h1>It is currently about 
+       {date.getHours() % 12 }
+        o'clock!
+      </h1>
   );
 }
 
