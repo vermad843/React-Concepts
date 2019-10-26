@@ -13,8 +13,13 @@ function App() {
    }else {
      timeOfDay = ' night'
    }
+
+   const styles = {
+     color : "orange",
+     backgroundColor : "red"
+    }
    return (
-     <h1 style = {{color : "orange", backgroundColor : "red"}}>
+     <h1 style = {styles}>
        Good{timeOfDay}
       </h1>
   );
