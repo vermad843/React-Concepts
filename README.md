@@ -3,3 +3,5 @@
 [] style = {{color : "orange",   backgroundColor : "red"}}
 []  instead of background-color  we wright this backgroundColor(camelCase)
 [] {{}} for applying styles 
+[] for adding px we have to make it ""
+[] fontSize : "200px"

@@ -16,7 +16,8 @@ function App() {
 
    const styles = {
      color : "orange",
-     backgroundColor : "red"
+     backgroundColor : "red",
+     fontSize : "100px"
     }
    return (
      <h1 style = {styles}>
