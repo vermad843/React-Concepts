@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<div>
-    <h1>hello world</h1><p> this is a paragraph</p>
-</div>
+ReactDOM.render(
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
     , document.getElementById("root"))
