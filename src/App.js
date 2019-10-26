@@ -2,17 +2,11 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const firstName = "Vishnu"
+  const lastName = "Verma"
   return (
-    <div className = "player">
-      <h1>Best player in the World!!</h1>
-      <input type = "checkbox" />
-      <p>Cristiano Ronaldo</p>
-      <input type = "checkbox" />
-      <p>Lionel Messi</p> 
-      <input type = "checkbox" />
-      <p>Neymar </p> 
-      <input type = "checkbox" />
-      <p>Ronaldino</p>
+    <div>
+       <h1>Hello {firstName + ' ' + lastName} </h1>
     </div>
   );
 }
