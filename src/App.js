@@ -14,7 +14,7 @@ function App() {
      timeOfDay = ' night'
    }
    return (
-     <h1>
+     <h1 style = {{color : "orange"}}>
        Good{timeOfDay}
       </h1>
   );
