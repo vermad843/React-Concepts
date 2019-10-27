@@ -1,17 +1,17 @@
 import React from 'react';
+import TodoItem from './TodoItem';
+import todosData from './todosData';
 import './App.css';
-import Products from './Products';//is a array of products
-import Product from './Product';//is a component 
 
 function App() {
-  const productComponent = Products.map((item) => {
-    return <Product key = {item.id} product = {item}/>
+  const todoItems = todosData.map((item) => {
+    return <TodoItem key = {item.id} item = {item}/>
   })
-   return (
-     <div>
-      {productComponent}
-     </div>
-   );
+  return (
+   <div className = "todo-list">
+      {todoItems}
+   </div>
+  );
 }
 
 export default App;
