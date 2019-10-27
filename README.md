@@ -6,4 +6,8 @@
 [] for adding px we have to make it ""
 [] fontSize : "200px"
 [] for adding css we have to use className 
-[] 
+[] using ternary inside the h3 : 
+    style = {{display : props.question ? "block" : "none"}}
+
+[] changing the color of answer when it  doesn't have question :
+     style = {{color : !props.question && "red"}}
