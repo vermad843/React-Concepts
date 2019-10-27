@@ -5,6 +5,7 @@ import Joke from './Joke';
 function App() {
    return (
      <div>
+        <Joke answer = "hey"/>
         <Joke question = "what is your name"
               answer = "Vishnu" />
         <Joke question = "how are you"
@@ -17,7 +18,7 @@ function App() {
               answer = "a lot"
         />
         <Joke question = "At what time you stop working"
-            answer = "till a point i am unavailable to work"
+            answer = "never"
         /> 
      </div>
    );
