@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
-import Joke from './Joke';
-import jokeData from './jokeData';
+import Products from './Products';//is a array of products
+import Product from './Product';//is a component 
 
 function App() {
- const jokeComponent = jokeData.map((joke) => {
-        return <Joke key = {joke.id} question = {joke.question}
-        answer = {joke.answer}/>
-      })
-
+  const productComponent = Products.map((item) => {
+    return <Product key = {item.id} product = {item}/>
+  })
    return (
      <div>
-       {jokeComponent}
+      {productComponent}
      </div>
    );
 }
