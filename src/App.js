@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
+import { is } from '@babel/types';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { 
-      name : 'Vishnu',
-      age : 23
+     isLoggedIn : true
      };
   }
   render() {
+    let wordDisplay
+     const {isLoggedIn} = this.state;
+     if(isLoggedIn == true) {
+      wordDisplay = 'In'
+     }else {
+         wordDisplay = "out"
+     }
     return (
        <div>
-          <h1>{this.state.name}</h1>
-          <h3>{this.state.age} years old</h3>
+          <h1>You are currently logged {wordDisplay} </h1>
        </div>
     );
   }
