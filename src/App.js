@@ -1,19 +1,28 @@
-import React from 'react';
-import TodoItem from './TodoItem';
-import todosData from './todosData';
-import './App.css';
-const todoItems = todosData.map((item) => {
-  return <TodoItem key = {item.id} item = {item}/>
-})
+import React, { Component } from 'react';
 
 
-function App() {
- return (
-  <div className = "todo-list">
-  {todoItems}
-</div> 
- );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            count : 0
+          };
+    }
+  
+ handleClick() {
+     this.setState({
+      count : 1
+     });
+ }
+
+render() {
+    return (
+      <div>
+          <h1>{this.state.count}</h1>
+          <button onClick = {this.handleClick}>Change!</button>
+      </div>
+    );
+  }
 }
-
 
 export default App;
