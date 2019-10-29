@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import { is } from '@babel/types';
+import React from 'react';
+import './App.css'
+ 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = { 
-     isLoggedIn : true
-     };
-  }
-  render() {
-    let wordDisplay
-     const {isLoggedIn} = this.state;
-     if(isLoggedIn == true) {
-      wordDisplay = 'In'
-     }else {
-         wordDisplay = "out"
-     }
-    return (
-       <div>
-          <h1>You are currently logged {wordDisplay} </h1>
-       </div>
-    );
-  }
+function handleClick() {
+  console.log('here i am !!!')
 }
 
-export default App;
+
+function App() {
+  return (
+   <div>
+      <img src = "cr.jpg" className = "image" alt = "cr"/>
+      <br/>
+      <br/>
+      <button onClick = {handleClick}>Click Me</button>
+   </div>
+  );
+}
+
+export default App
+
+
