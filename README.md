@@ -48,3 +48,66 @@
 ⌨️ (4:56:11) Writing Modern React Apps
 ⌨️ (5:02:17) Project Ideas for Practicing
 ⌨️ (5:03:06) Conclusion
+
+
+
+
+Todo App : Explaination 
+
+
+[x] adding checkboxes and text below it
+
+[x] creating  TodoItem component and rendering it    
+     in the App.js
+
+[x] creating todosData component and accessing it 
+    in App.js component 
+
+  . In App.js mapping todosData and returning 
+    TodoItem component
+  
+  .todos is our array which have all the property   
+   which are inside todosData[id,item,completed]
+  
+  .todos == todosData  
+
+  .In TodoItem for accessing any property i have
+   to say this.props.todos.text
+
+
+[x] adding todos array to our state
+
+
+[x] In TodoItem adding onChange Event and writing
+    checked method
+
+
+[x] instead of writing a checked method in            
+    TodoItem
+   
+   .we can do this in App.js
+   .by creating handleChange method by (id)
+   .and by adding handleChange as a property in 
+    TodoItem inside todoItems
+
+
+   .we are using setState and binding this above 
+
+   .we don't want to change our state directly
+
+   .we are copying the state and then changing it
+
+   .for making completed property to flip from true t  
+     to  false
+
+   .in TodoItem in onChange we are using  a fat   
+    arrow function 
+ 
+   .accessing handleChange method by saying 
+    this.props.handleChange(this.props.todos.id))
+
+
+[x] adding some Styles to our <p></p>
+
+
+*****
