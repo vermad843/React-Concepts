@@ -3,9 +3,17 @@ import TodoItem from './TodoItem';
 import todosData from './todosData';
 import './App.css';
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            todos : todosData
+        }
+
+    }
     render() {
-      const todoItems = todosData.map((todos) => {
-          return <TodoItem key = {todos.id} todos = {todos}/>
+        const {todos} = this.state;
+      const todoItems = todos.map((todos) => {
+          return <TodoItem key = {todos.id} todos  = {todos}/>
       });
         return (
             <div className = "list">
