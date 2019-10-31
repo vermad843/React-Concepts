@@ -14,8 +14,10 @@ class App extends Component {
     render() {
         const {unreadMessages} = this.state;
         return (
-            <div>
+            <div>{
+                unreadMessages.length > 0 && 
                 <h2>You have {unreadMessages.length} unread messages!</h2>
+            }
             </div>
         );
     }
