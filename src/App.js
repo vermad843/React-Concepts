@@ -20,7 +20,7 @@ class App extends Component {
         const {isLoading} = this.state;
         return (
             <div>
-                <Conditional isLoading ={isLoading}/>
+                {isLoading ? <h1>Loading...</h1>:<Conditional/>}
             </div>
         );
     }
