@@ -23,12 +23,15 @@ class App extends Component {
            <form>
                <input 
                 type = "text" 
+                value = {firstName}
                 name = "firstName"
                 placeholder = "First Name"
                 onChange = {this.handleChange}
                 />
+                <br/>
                   <input 
                 type = "text" 
+                value = {lastName}
                 name = "lastName"
                 placeholder = "Last Name"
                 onChange = {this.handleChange}
@@ -36,6 +39,7 @@ class App extends Component {
                 <h1>
                    {firstName} {lastName}
                 </h1>
+                <textarea value = {"some Default Value"}/>
            </form> 
         );
     }
