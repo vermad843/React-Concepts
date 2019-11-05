@@ -7,15 +7,18 @@ class App extends Component {
        this.state = {
          firstName : '',
          lastName : '',
-         isFriendly : true
+         isFriendly : false
        }
        this.handleChange = this.handleChange.bind(this);
    }
 
  handleChange(event) {
-   this.setState({
-      [event.target.name] : event.target.value
-   })
+   const {name, value, type, checked} = event.target
+  type === 'checkbox' ? this.setState({
+    [name] : checked
+  }) : this.setState({
+    [name] : value
+  })
  }
 
     render() {
@@ -41,10 +44,15 @@ class App extends Component {
                    {firstName} {lastName}
                 </h1>
                 <textarea value = {"some Default Value"}/>
+                <br/>
+              <label> 
                 <input
                   type = "checkbox"
+                  name = "isFriendly"
                   checked = {isFriendly}
-                />
+                  onChange = {this.handleChange}
+                />Is friendly
+              </label> 
            </form> 
         );
     }
