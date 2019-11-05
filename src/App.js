@@ -1,35 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
-
 
 class App extends Component {
-     constructor(props) {
-         super(props);
-         this.state = {
-           isLoggedIn : false 
-           };
-           this.handleClick = this.handleClick.bind(this);
-        }
+    constructor(props) {
+        super(props);
+        this.state = {  };
+    }
 
-        handleClick() {
-         this.setState((prevState) => {
-             return {
-             isLoggedIn : !prevState.isLoggedIn
-             }
-         })
-        }
- 
+   componentDidMount() {
+   fetch("https://swapi.co/api/people/1")
+      .then(res => res.json())
+      .then(data => console.log(data))
+   }
+
     render() {
-        const {isLoggedIn} = this.state;
-        let buttonText = isLoggedIn ? 'LOG OUT' : 'LOG IN'
-        let text   = isLoggedIn ? 'Logged IN' : 'Logged Out'
         return (
-            <div>
-                
-                 <button onClick = {this.handleClick}>{buttonText}</button>
-                
-                 <h1>{text}</h1>
-            </div>
+            <h1>Fetching the data</h1>
         );
     }
 }
