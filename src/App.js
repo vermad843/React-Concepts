@@ -17,7 +17,8 @@ class App extends Component {
       .then(res => res.json())
       .then(data => { 
           this.setState({
-          character : data 
+          character : data ,
+          loading : false
       })
     })   
 }  
