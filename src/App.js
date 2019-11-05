@@ -5,7 +5,8 @@ class App extends Component {
    constructor() {
        super();
        this.state = {
-         firstName : ''
+         firstName : '',
+         lastName : ''
        }
        this.handleChange = this.handleChange.bind(this);
    }
@@ -17,7 +18,7 @@ class App extends Component {
  }
 
     render() {
-      const {firstName} = this.state;
+      const {firstName, lastName} = this.state;
         return (
            <form>
                <input 
@@ -25,8 +26,13 @@ class App extends Component {
                 placeholder = "First Name"
                 onChange = {this.handleChange}
                 />
+                  <input 
+                type = "text" 
+                placeholder = "Last Name"
+                onChange = {this.handleChange}
+                />
                 <h1>
-                   {firstName}
+                   {firstName}{lastName}
                 </h1>
            </form> 
         );
