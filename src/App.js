@@ -6,7 +6,8 @@ class App extends Component {
        super();
        this.state = {
          firstName : '',
-         lastName : ''
+         lastName : '',
+         isFriendly : true
        }
        this.handleChange = this.handleChange.bind(this);
    }
@@ -18,7 +19,7 @@ class App extends Component {
  }
 
     render() {
-      const {firstName, lastName} = this.state;
+      const {firstName, lastName, isFriendly} = this.state;
         return (
            <form>
                <input 
@@ -40,6 +41,10 @@ class App extends Component {
                    {firstName} {lastName}
                 </h1>
                 <textarea value = {"some Default Value"}/>
+                <input
+                  type = "checkbox"
+                  checked = {isFriendly}
+                />
            </form> 
         );
     }
