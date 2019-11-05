@@ -8,7 +8,8 @@ class App extends Component {
          firstName : '',
          lastName : '',
          isFriendly : false,
-         gender : ''
+         gender : '',
+         favColor : 'Blue'
        }
        this.handleChange = this.handleChange.bind(this);
    }
@@ -23,7 +24,7 @@ class App extends Component {
  }
 
     render() {
-      const {firstName, lastName, isFriendly, gender} = this.state;
+      const {firstName, lastName, isFriendly, gender, favColor} = this.state;
         return (
            <form>
                <input 
@@ -72,7 +73,23 @@ class App extends Component {
                   onChange = {this.handleChange}
                 />Female
               </label> 
+              <br/>
+
+              <label>Favorite Color</label>
+              <select value = {favColor}
+                      onChange = {this.handleChange}
+                      name = "favColor"
+                      >
+
+                      <option value = "Blue">Blue</option>
+                      <option value = "green">Green</option>
+                      <option value = "red">Red</option>
+                      <option value = "orange">Orange</option>
+                      <option value = "yellow">Yellow</option>
+
+              </select>
               <h2>You are a {gender}</h2>
+              <h2>You favorite color is {favColor}</h2>
            </form> 
         );
     }
