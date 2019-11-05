@@ -22,11 +22,13 @@ class App extends Component {
     render() {
         const {isLoggedIn} = this.state;
         let buttonText = isLoggedIn ? 'LOG OUT' : 'LOG IN'
+        let text   = isLoggedIn ? 'Logged IN' : 'Logged Out'
         return (
             <div>
-                <h1>
+                
                  <button onClick = {this.handleClick}>{buttonText}</button>
-                </h1>
+                
+                 <h1>{text}</h1>
             </div>
         );
     }
