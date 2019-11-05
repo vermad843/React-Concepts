@@ -7,7 +7,8 @@ class App extends Component {
        this.state = {
          firstName : '',
          lastName : '',
-         isFriendly : false
+         isFriendly : false,
+         gender : ''
        }
        this.handleChange = this.handleChange.bind(this);
    }
@@ -22,7 +23,7 @@ class App extends Component {
  }
 
     render() {
-      const {firstName, lastName, isFriendly} = this.state;
+      const {firstName, lastName, isFriendly, gender} = this.state;
         return (
            <form>
                <input 
@@ -58,7 +59,7 @@ class App extends Component {
                   type = "radio"
                   name = "gender"
                   value = "male"
-                  checked = {isFriendly}
+                  checked = {gender === 'male'}
                   onChange = {this.handleChange}
                 />Male
               </label>  
@@ -67,10 +68,11 @@ class App extends Component {
                   type = "radio"
                   name = "gender"
                   value = "female"
-                  checked = {isFriendly}
+                  checked = {gender === 'female'}
                   onChange = {this.handleChange}
                 />Female
               </label> 
+              <h2>You are a {gender}</h2>
            </form> 
         );
     }
