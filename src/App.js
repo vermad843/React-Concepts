@@ -26,7 +26,7 @@ class App extends Component {
     render() {
       const {firstName, lastName, isFriendly, gender, favColor} = this.state;
         return (
-           <form>
+           <form onSubmit = {this.handleSubmit}>
                <input 
                 type = "text" 
                 value = {firstName}
@@ -90,6 +90,7 @@ class App extends Component {
               </select>
               <h2>You are a {gender}</h2>
               <h2>You favorite color is {favColor}</h2>
+              <button>Submit</button>
            </form> 
         );
     }
