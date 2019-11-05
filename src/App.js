@@ -1,23 +1,26 @@
-// Conditional rendering 
 import React, { Component } from 'react';
-import Conditional from './Conditional'
-class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-           unreadMessages : [
-               "No Phone",
-               "I can do this."
-           ] 
+import './App.css';
+
+
+    class App extends Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+              isLoggedIn : false 
+              };
+              this.handleClick = this.handleClick.bind(this);
         }
-    }
+
+        handleClick() {
+         console.log('hey');
+        }
+ 
     render() {
-        const {unreadMessages} = this.state;
         return (
-            <div>{
-                unreadMessages.length > 0 && 
-                <h2>You have {unreadMessages.length} unread messages!</h2>
-            }
+            <div>
+                <h1>
+                <button onClick = {this.handleClick}>Log in</button>
+                </h1>
             </div>
         );
     }
